@@ -1,0 +1,425 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: poppins, sans-serif;
+	-webkit-tap-highlight-color: transparent;
+}
+
+
+body {
+	transition: background 0.5s ease, color 0.5s ease;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	background-color: var(--color-primary);
+	user-select: none;
+}
+
+
+/* Light theme colors */
+.theme-light {
+	--color-primary: #EAE7DC;
+	--color-secondary: #a5d8ae;
+	--color-accent: #57c469;
+	--font-color: #000000;
+}
+
+
+/* Dark theme colors */
+.theme-dark {
+	--color-primary: #464866;
+	--color-secondary: #25274D;
+	--color-accent: #AAABB8;
+	--font-color: #FFFFFF;
+}
+
+
+/* Theme change button design */
+.themechange {
+	transition: background 0.5s ease, color 0.5s ease;
+	color: var(--font-color);
+	display: flex;
+	background: var(--color-primary);
+	flex-direction: column;
+	justify-content: left;
+	align-items: left;
+	margin: 10px;
+}
+
+
+.themechange button {
+	padding: 10px;
+	margin: 20px;
+	color: var(--font-color);
+	background: var(--color-secondary);
+	padding: 10px 20px;
+	border: 0;
+	border-radius: 10px;
+	font-size: 20pt;
+}
+/* Theme change button design end */
+
+
+.namehead {
+	transition: background 0.5s ease, color 0.5s ease;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--color-primary);
+	padding: 50px;
+    opacity: 0; /* Початкове значення прозорості: елемент буде невидимим */
+    animation-name: fadeIn; /* Назва анімації */
+    animation-duration: 1s; /* Тривалість анімації */
+    animation-delay: 0.5s; /* Затримка перед початком анімації */
+    animation-fill-mode: forwards; /* Після закінчення анімації елемент залишиться видимим */
+}
+
+
+.name {
+	transition: background 0.5s ease, color 0.5s ease;
+	background-color: var(--color-secondary);
+	color: var(--font-color);
+	padding: 10px;
+	margin: 10px;
+	border-radius: 10px;
+	font-weight: 500;
+	font-size: 25pt;
+	text-align: center;
+	user-select: none;
+    opacity: 0; 
+    animation-name: fadeIn; 
+    animation-duration: 2s; 
+    animation-delay: 0.5s; 
+    animation-fill-mode: forwards; 
+}
+
+
+/* Tooltiptext window */
+.tooltiptext {
+	visibility: hidden;
+	background-color: var(--color-secondary);
+	color: var(--font-color);
+	text-align: center;
+	border-radius: 10px;
+	padding: 6px 0;
+	user-select: none;
+
+	/* Position the tooltip */
+	position: absolute;
+	z-index: 1;
+	width: 96px;
+	top: 105%;
+	left: 50%;
+	margin-left: -48px;
+}
+
+
+@keyframes ani {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+/* Tooltiptext window end */
+
+
+.social {
+	transition: background 0.5s ease, color 0.5s ease;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	position: relative;
+	background-color: var(--color-primary);
+	padding: 20px;
+	margin: 10px;
+	border-radius: 15px;
+}
+
+
+/* insta */
+.instagram {
+	margin: 20px;
+	position: relative;
+	display: inline-block;
+    opacity: 0; 
+    animation-name: fadeIn;
+    animation-duration: 3s; 
+    animation-delay: 0.5s; 
+    animation-fill-mode: forwards; 
+}
+
+
+.instagram img {
+	transition: transform 0.3s ease;
+}
+
+
+.instagram:hover img {
+	overflow: hidden;
+	transition: transform 0.5s ease;
+	transform: scale(1.1);
+}
+
+
+.instagram:hover .tooltiptext {
+	visibility: visible;
+	opacity: 0;
+	animation: ani 0.5s forwards;
+}
+/* insta end */
+
+
+/* lnkdn */
+.linkedin {
+	margin: 20px;
+	position: relative;
+	display: inline-block;
+    opacity: 0; 
+    animation-name: fadeIn; 
+    animation-duration: 4s; 
+    animation-delay: 0.5s; 
+    animation-fill-mode: forwards; 
+}
+
+
+.linkedin img {
+	transition: transform .3s ease;
+	position: relative;
+	display: inline-block;
+}
+
+
+.linkedin:hover img {
+	overflow: hidden;
+	transition: transform 0.5s ease;
+	transform: scale(1.1);
+}
+
+
+.linkedin:hover .tooltiptext {
+	visibility: visible;
+	opacity: 0;
+	animation: ani 0.5s forwards;
+}
+/* lnkdn end */
+
+
+/* GitHub */
+.github {
+	margin: 20px;
+	position: relative;
+	display: inline-block;
+    opacity: 0; 
+    animation-name: fadeIn; 
+    animation-duration: 5s; 
+    animation-delay: 0.5s; 
+    animation-fill-mode: forwards; 
+}
+
+
+.github img {
+	transition: transform .3s ease;
+}
+
+
+.github:hover img {
+	overflow: hidden;
+	transition: transform 0.5s ease;
+	transform: scale(1.1);
+}
+
+
+.github:hover .tooltiptext {
+	visibility: visible;
+	opacity: 0;
+	animation: ani 0.5s forwards;
+}
+/* GitHub end */
+
+
+.donations {
+	transition: background 0.5s ease, color 0.5s ease;
+	margin: 10px;
+	border-radius: 10px;
+	background-color: var(--color-secondary);
+	padding: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    opacity: 0; 
+    animation-name: fadeIn; 
+    animation-duration: 6s; 
+    animation-delay: 0.5s; 
+    animation-fill-mode: forwards; 
+}
+
+
+/* Ko-fi */
+.ko-fi {
+
+	transition: transform .3s ease;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: scale(1.1);
+    opacity: 0; 
+    animation-name: fadeIn; 
+    animation-duration: 7s; 
+    animation-delay: 0.5s; 
+    animation-fill-mode: forwards; 
+}
+
+
+.ko-fi:hover {
+	transform: scale(1.2);
+}
+/* Ko-fi end */
+
+
+/* Scrollbar */
+
+/* Width */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 10px;
+}
+
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+	border-radius: 10px;
+}
+/* Scrollbar end */
+
+
+/* Theme switch button */
+
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--color-accent);
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+
+.slider:before {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	height: 40px;
+	width: 40px;
+	bottom: 0;
+	background-color: var(--color-secondary);
+	margin: auto 0;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+	box-shadow: 0 0px 15px #2020203d;
+	background: white url('https://i.ibb.co/7JfqXxB/sunny.png');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+input:checked + .slider {
+	background-color: var(--color-accent);
+}
+
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196f3;
+}
+
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(24px);
+	-ms-transform: translateX(24px);
+	transform: translateX(24px);
+	background: white url('https://i.ibb.co/FxzBYR9/night.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: var(--color-secondary);
+}
+/* End of the slider */
+
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+
+.slider.round:before {
+	border-radius: 50%;
+}
+/* Rounded sliders end */
+
+/* Theme switch button end */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 9vh; /* Налаштуйте висоту контейнера відповідно до вашої потреби */
+  }
+.project-button {
+    transition: background 0.5s ease, color 0.5s ease;
+	background-color: var(--color-secondary);
+	color: var(--font-color);
+    display: inline-block;
+    padding: 20px 40px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 18px; /* Змінити розмір шрифту кнопки */
+    font-weight: bold; /* Налаштуйте жирність шрифту кнопки, якщо потрібно */
+    opacity: 0; 
+  animation-name: fadeIn; 
+  animation-duration: 8s; 
+  animation-delay: 0.5s; 
+  animation-fill-mode: forwards; 
+  transition: transform 0.3s;
+  }
+  
+  .project-button:hover {
+	transform: scale(1.1); /* Збільште кнопку при наведенні */
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
